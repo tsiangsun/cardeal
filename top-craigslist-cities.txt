@@ -1,0 +1,241 @@
+sfbay 
+losangeles 
+newyork 
+seattle 
+orangecounty 
+sandiego 
+chicago 
+sacramento 
+portland 
+phoenix 
+washingtondc 
+atlanta 
+miami 
+boston 
+dallas 
+inlandempire 
+denver
+minneapolis
+austin
+houston
+tampa
+orlando
+newjersey
+philadelphia
+lasvegas
+detroit
+
+cnj
+raleigh
+baltimore
+stlouis
+charlotte
+sanantonio
+milwaukee
+nashville
+cleveland
+kansascity
+honolulu
+grandrapids
+fortmyers
+columbus
+cincinnati
+ventura
+nh
+tucson
+longisland
+indianapolis
+hudsonvalley
+pittsburgh
+madison.craigslist.org	0.68%
+jacksonville.craigslist.org	0.67%
+sarasota.craigslist.org	0.65%
+hartford.craigslist.org	0.65%
+richmond.craigslist.org	0.64%
+providence.craigslist.org	0.64%
+maine.craigslist.org	0.63%
+southjersey.craigslist.org	0.62%
+akroncanton.craigslist.org	0.62%
+modesto.craigslist.org	0.61%
+greenville.craigslist.org	0.60%
+boulder.craigslist.org	0.60%
+eugene.craigslist.org	0.60%
+stockton.craigslist.org	0.58%
+santabarbara.craigslist.org	0.58%
+reno.craigslist.org	0.57%
+spokane.craigslist.org	0.57%
+worcester.craigslist.org	0.57%
+cosprings.craigslist.org	0.56%
+fresno.craigslist.org	0.56%
+louisville.craigslist.org	0.56%
+dayton.craigslist.org	0.55%
+palmsprings.craigslist.org	0.55%
+newhaven.craigslist.org	0.54%
+bakersfield.craigslist.org	0.54%
+oklahomacity.craigslist.org	0.54%
+albany.craigslist.org	0.53%
+norfolk.craigslist.org	0.53%
+boise.craigslist.org	0.52%
+bellingham.craigslist.org	0.51%
+fortcollins.craigslist.org	0.51%
+asheville.craigslist.org	0.50%
+annarbor.craigslist.org	0.50%
+albuquerque.craigslist.org	0.50%
+springfield.craigslist.org	0.48%
+monterey.craigslist.org	0.48%
+greensboro.craigslist.org	0.48%
+knoxville.craigslist.org	0.48%
+tulsa.craigslist.org	0.48%
+salem.craigslist.org	0.47%
+jerseyshore.craigslist.org	0.47%
+fayar.craigslist.org	0.47%
+desmoines.craigslist.org	0.46%
+buffalo.craigslist.org	0.45%
+vermont.craigslist.org	0.45%
+daytona.craigslist.org	0.45%
+rochester.craigslist.org	0.44%
+columbia.craigslist.org	0.43%
+bend.craigslist.org	0.42%
+omaha.craigslist.org	0.42%
+ocala.craigslist.org	0.41%
+westernmass.craigslist.org	0.41%
+columbiamo.craigslist.org	0.40%
+lancaster.craigslist.org	0.40%
+lakeland.craigslist.org	0.40%
+newlondon.craigslist.org	0.40%
+bham.craigslist.org	0.40%
+appleton.craigslist.org	0.40%
+goldcountry.craigslist.org	0.39%
+winstonsalem.craigslist.org	0.39%
+southbend.craigslist.org	0.39%
+slo.craigslist.org	0.39%
+lexington.craigslist.org	0.39%
+charleston.craigslist.org	0.38%
+spacecoast.craigslist.org	0.38%
+allentown.craigslist.org	0.38%
+syracuse.craigslist.org	0.37%
+chattanooga.craigslist.org	0.37%
+fredericksburg.craigslist.org	0.36%
+delaware.craigslist.org	0.36%
+chico.craigslist.org	0.35%
+greenbay.craigslist.org	0.35%
+huntsville.craigslist.org	0.34%
+elpaso.craigslist.org	0.34%
+neworleans.craigslist.org	0.33%
+lansing.craigslist.org	0.33%
+saltlakecity.craigslist.org	0.33%
+toledo.craigslist.org	0.33%
+secure.craigslist.org	0.33%
+images.craigslist.org	0.33%
+stcloud.craigslist.org	0.33%
+treasure.craigslist.org	0.33%
+charlottesville.craigslist.org	0.32%
+harrisburg.craigslist.org	0.32%
+rockford.craigslist.org	0.32%
+redding.craigslist.org	0.31%
+corvallis.craigslist.org	0.31%
+annapolis.craigslist.org	0.30%
+fortwayne.craigslist.org	0.30%
+memphis.craigslist.org	0.30%
+kpr.craigslist.org	0.30%
+medford.craigslist.org	0.30%
+fayetteville.craigslist.org	0.29%
+eastnc.craigslist.org	0.29%
+wichita.craigslist.org	0.28%
+cedarrapids.craigslist.org	0.28%
+eauclaire.craigslist.org	0.28%
+gainesville.craigslist.org	0.28%
+kalamazoo.craigslist.org	0.28%
+york.craigslist.org	0.28%
+anchorage.craigslist.org	0.28%
+athensga.craigslist.org	0.28%
+easttexas.craigslist.org	0.27%
+lincoln.craigslist.org	0.27%
+myrtlebeach.craigslist.org	0.27%
+littlerock.craigslist.org	0.27%
+wausau.craigslist.org	0.26%
+tallahassee.craigslist.org	0.26%
+roanoke.craigslist.org	0.26%
+wilmington.craigslist.org	0.26%
+flint.craigslist.org	0.25%
+prescott.craigslist.org	0.25%
+frederick.craigslist.org	0.25%
+limaohio.craigslist.org	0.24%
+mobile.craigslist.org	0.24%
+iowacity.craigslist.org	0.24%
+killeen.craigslist.org	0.24%
+mcallen.craigslist.org	0.24%
+tricities.craigslist.org	0.24%
+flagstaff.craigslist.org	0.23%
+youngstown.craigslist.org	0.22%
+savannah.craigslist.org	0.22%
+erie.craigslist.org	0.22%
+merced.craigslist.org	0.22%
+yakima.craigslist.org	0.22%
+reading.craigslist.org	0.22%
+macon.craigslist.org	0.22%
+hickory.craigslist.org	0.22%
+northernwi.craigslist.org	0.22%
+pensacola.craigslist.org	0.21%
+duluth.craigslist.org	0.21%
+wenatchee.craigslist.org	0.21%
+bloomington.craigslist.org	0.21%
+scranton.craigslist.org	0.21%
+binghamton.craigslist.org	0.21%
+easternshore.craigslist.org	0.21%
+augusta.craigslist.org	0.20%
+southcoast.craigslist.org	0.20%
+waco.craigslist.org	0.20%
+muskegon.craigslist.org	0.20%
+skagit.craigslist.org	0.20%
+nmi.craigslist.org	0.20%
+quadcities.craigslist.org	0.20%
+joplin.craigslist.org	0.19%
+evansville.craigslist.org	0.19%
+peoria.craigslist.org	0.19%
+humboldt.craigslist.org	0.19%
+lacrosse.craigslist.org	0.19%
+smd.craigslist.org	0.19%
+siouxfalls.craigslist.org	0.18%
+batonrouge.craigslist.org	0.18%
+fargo.craigslist.org	0.18%
+tippecanoe.craigslist.org	0.18%
+panamacity.craigslist.org	0.18%
+mohave.craigslist.org	0.18%
+collegestation.craigslist.org	0.18%
+missoula.craigslist.org	0.18%
+lubbock.craigslist.org	0.17%
+dubuque.craigslist.org	0.17%
+saginaw.craigslist.org	0.17%
+corpuschristi.craigslist.org	0.17%
+jackson.craigslist.org	0.17%
+springfieldil.craigslist.org	0.17%
+carbondale.craigslist.org	0.17%
+eastidaho.craigslist.org	0.17%
+lynchburg.craigslist.org	0.17%
+ithaca.craigslist.org	0.17%
+oregoncoast.craigslist.org	0.17%
+swmi.craigslist.org	0.16%
+poconos.craigslist.org	0.16%
+fortsmith.craigslist.org	0.16%
+hattiesburg.craigslist.org	0.16%
+blacksburg.craigslist.org	0.16%
+santafe.craigslist.org	0.16%
+waterloo.craigslist.org	0.15%
+janesville.craigslist.org	0.15%
+bozeman.craigslist.org	0.15%
+topeka.craigslist.org	0.15%
+pueblo.craigslist.org	0.15%
+okaloosa.craigslist.org	0.15%
+olympic.craigslist.org	0.14%
+stgeorge.craigslist.org	0.14%
+westslope.craigslist.org	0.14%
+jacksontn.craigslist.org	0.14%
+pullman.craigslist.org	0.13%
+utica.craigslist.org	0.13%
+gulfport.craigslist.org	0.13%
+kalispell.craigslist.org	0.12%
+costarica.craigslist.org	0.08%
+plattsburgh.craigslist.org	0.08%
+malaysia.craigslist.org	0.08%
+dubai.craigslist.org	0.06%
