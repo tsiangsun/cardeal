@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Welcome to GetCarDeals!</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-indent: 0.2em;
+            margin-left: 1em;
+        }
+        th, td {
+            padding: 5px;
+        }
+        th {
+            text-align: left;
+        }
+        h1 {
+            text-indent: 15px;
+        }
+        h2 {
+            text-indent: 15px;
+        }
+        h3 {
+            text-indent: 15px;
+        }
+        h4 {
+            text-indent: 15px;
+        }
+        p {
+            text-indent: 15px;
+        }
+        div {
+            text-indent: 15px;
+        }
+        select {
+            margin-left: 15px;
+        }
+        input {
+            margin-left:15px;
+        }
+        p.indent{ padding-left: 15px }
+        div.indent{ padding-left: 15px }
+    </style>
+	</head>
+	<body>
+		<div class=page>
+  			<h1 style="color:#2E86C1">Welcome to GetCarDeals!</h1>
+  			<div class=metanav>
+  			    <h3> "Find used car deals Faster and Easier"</h3> 
+                <img src="{{url_for('static', filename='titleimage-ml.png')}}" style="width:450px;height:158px;" />
+                <br>
+                
+                <!--<table style="width:600px">
+                  <tr>
+                    <th>Problem</th>
+                    <th>Solution</th> 
+                  </tr>
+                  <tr>
+                    <td>Not easy to tell a used car's value (various conditions)</td>
+                    <td>Machine learning to predict price</td>
+                  </tr>
+                  <tr>
+                    <td>Good deals will be gone quickly, we need to act quickly</td>
+                    <td>Automatic email alert</td>
+                  </tr>
+                  <tr>
+                    <td>Not easy to memorize or compare cars' details</td>
+                    <td>Interactive web visualization</td>
+                  </tr>
+                </table>-->
+                <h4> Why would you want to use this app?</h4>
+                <p>(1) It is not easy to tell a used car's value (various conditions) - Machine learning</p>
+                <p>(2) Good deals will be gone quickly, we need to act quickly - Automatic email alert</p>
+                <p>(3) Not easy to memorize or compare cars' details - Interactive web visualization
+                </p>
+                <br>
+                
+    			<h4 style="color:black">To start, please enter car make, model and budget, e.g. Toyota, Camry, 10000.</h4>
+                <!--<p> ( * means required input information)</p>-->
+                
+    			<form id='input' method='post' action='graph'>	
+	  			<p>
+					Make <sup>*</sup>: <input type='text' name='make' />
+					Model <sup>*</sup>: <input type='text' name='model' />
+					Budget $ <sup>*</sup>: <input type='text' name='budget' /><br>
+				</p>
+				
+				<h4 style="color:black">Please select city <sup>*</sup>:</h4>
+				<select name="city">
+                        <option value="phenix"> Phenix, AZ</option>
+                        <option value="inlandempire"> Inland Empire, CA</option>
+                        <option value="losangeles"> Los Angeles, CA</option>
+                        <option value="orangecounty"> Orange County, CA</option>
+                        <option value="sacramento"> Sacramento, CA</option>
+                        <option value="sandiego"> San Diego, CA</option>
+                        <option value="sfbay" selected> San Francisco Bay Area, CA</option>
+                        <option value="denver"> Denver, CO</option>
+                        <option value="washingtondc"> Washington, DC</option>
+                        <option value="miami"> Miami, FL</option>
+                        <option value="orlando"> Orlando, FL</option>
+                        <option value="tampa"> Tampa, FL</option>
+                        <option value="chicago"> Chicago, IL</option>
+                        <option value="atlanta"> Atlanta, GA</option>
+                        <option value="boston"> Boston, MA</option>
+                        <option value="detroit"> Detroit, MI </option>
+                        <option value="minneapolis"> Minneapolis, MN</option>
+                        <option value="stlouis"> St. Louis, MO </option>
+                        <option value="newjersey"> north New Jersey</option>
+                        <option value="lasvegas"> Las Vegas, NV </option>
+                        <option value="newyork"> New York City, NY</option>
+                        <option value="portland"> Portland, OR</option>
+                        <option value="philadelphia"> Philadelphia, PA</option>
+                        <option value="austin"> Austin, TX</option>
+                        <option value="dallas"> Dallas, TX</option>
+                        <option value="houston"> Houston, TX</option>
+                        <option value="seattle"> Seattle, WA</option>
+                </select>
+                <br><br>
+	    			<input type="submit" value="Submit">
+	  			</p>
+				</form><br><br>
+  			</div>
+		</div>
+	</body>
+</html>
+
+
+<!--
+<h4 style="color:black">Please select priority: </h4>
+<p>
+    <input type="checkbox" name='balance_pri'>Balanced priority (default)<br>
+    <input type="checkbox" name='year_pri'>Year priority<br>
+    <input type="checkbox" name='miles_pri'>Mileage priority<br>
+    <input type="checkbox" name='budget_pri'>Budget priority<br>
+</p>
+<br>
+<h4 style="color:black">Enter email for deal alert service: </h4>
+<p> <input type='text' name='email' /><br> <br>
+-->

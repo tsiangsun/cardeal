@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Car deals summary - GetCarDeals!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link
+    href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css"
+    rel="stylesheet" type="text/css">
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
+  <style>
+                table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-indent: 5px;
+            margin-left: 10px;
+        }
+        th, td {
+            padding: 5px;
+        }
+        th {
+            text-align: left;
+        }
+        h1 {
+            text-indent: 15px;
+        }
+        h2 {
+            text-indent: 15px;
+        }
+        h3 {
+            text-indent: 15px;
+        }
+        h4 {
+            text-indent: 15px;
+        }
+        p {
+            text-indent: 15px;
+        }
+        div {
+            text-indent: 15px;
+        }
+        select {
+            margin-left: 15px;
+        }
+        input {
+            margin-left:15px;
+        }
+        p.indent{ padding-left: 15px }
+        div.indent{ padding-left: 15px }
+    </style>
+  </head>
+  <body>
+    <div>
+        <h4><a href='index'>Return to homepage</a></h4>
+    </div>
+    <div id="wrapper">
+        <div>
+            <h2>Figure: Car deals of {{ make }} {{model}}</h2>
+                {{ div | safe }}
+                {{ script | safe }}
+        </div>
+        <br> <br>
+        <div>
+            <h2>Table: Car deals of {{ make }} {{model}}</h2>
+                {{ datatable | safe }}
+                
+        </div>
+        <br> <br>       
+        <div> 
+            <h2>Would you like to get an email copy of the results?</h2>
+            <form id='input' method='post' action='alert'>	
+                    <h4 style="color:black">Enter email for deal alert service: </h4>
+                    <p> <input type='text' name='email' /><br> 
+                    <h4 style="color:black">Enter your name: </h4>
+                    <p> <input type='text' name='myname' /><br> 	
+                    <br> 
+                        <input type="submit" value="Send me E-mail!">
+                    </p><br><br>
+            </form>
+		</div>
+    </div>
+  </body>
+</html>
+
+
+<!-- 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link
+    href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css"
+    rel="stylesheet" type="text/css">
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
+    {{ script | safe }}
+  </head>
+  <body>
+    <div>
+        <h2><a href='index'>Return to index</a></h2>
+    </div>
+    {{ div | safe }}
+  </body>
+</html>
+-->

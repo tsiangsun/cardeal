@@ -210,6 +210,8 @@ def get_all_pages(csvfilename, URLs):
     wrongcount = 0
     maxwrong = 10
     pagecount = startpage
+    skipcount = 0
+    maxskipwait = 30
     
     for myurl in URLs: 
     
@@ -234,14 +236,22 @@ def get_all_pages(csvfilename, URLs):
         response = requests.get(myurl, headers=head)
 
         results_page = get_search_titles(response) #list of (prices, pids, urls, times, titles)
+
+        random.shuffle(results_page) ### randomize order of open post pages
     
         for i, result in enumerate(results_page) :
-            
-            print 'PG #', i, ':', result[3],
-            
+
             y = random.uniform(2,6)
             time.sleep(y)
-            
+
+            if skipcount > maxskipwait:
+                y = random.uniform(30,60)
+                print 'Skiped too many, sleep for %d sec...' % y
+                skipcount = 0
+                time.sleep(y)
+
+            print 'PG #', i, ':', result[3],
+
             if newer_than_date(result[3],filterdate) :
                 pass
             else:
@@ -258,7 +268,8 @@ def get_all_pages(csvfilename, URLs):
             
             mytitle, myimglink, mymessage, myattr_model, myattributes = analyze_page(page)
             if mytitle == '' :
-                print '        ^^^^^^^^^^^^^^ Skip this entry ^^^^^^  no title '
+                print '        ^^^^^^^^^^^^^^ Skip this entry ^^^^^^^^^^^^  [ no title ] '
+                skipcount += 1
                 continue
                 
             myyear = get_year(mytitle, myattr_model) 
@@ -269,9 +280,10 @@ def get_all_pages(csvfilename, URLs):
                      or model not in mytitle:  #or make not in mytitle
                 #skip this entry
                 print '  Title =', mytitle
-                print '        ^^^^^^^^^^^^^^ Skip this entry ^^^^^^  title status:', title_status
+                print '        ^^^^^^^^^^^^^^ Skip this entry ^^^^^^^^^^^^  [ title status ]:', title_status
+                skipcount += 1
             else: 
-                print '  Title =', mytitle, '  [Saved]'
+                print '  Title =', mytitle, ' ==== >>> [[ Saved ]]'
                 # append data
                 pidl.append(result[1].encode('ascii', 'ignore'))
                 posttimel.append(result[3].encode('ascii', 'ignore'))
@@ -292,7 +304,7 @@ def get_all_pages(csvfilename, URLs):
                 
         # save data of this page
         rows = len(pidl)
-        print "============= >>> Added # of rows = ", rows
+        print "==================== >>> Added # of rows = ", rows
 
         alist = []
 
@@ -306,11 +318,11 @@ def get_all_pages(csvfilename, URLs):
 
         print 'Page #', pagecount, 'of', len(URLs)+startpage, ':', make, model, '@', city ,'finished !'
         pagecount += 1
-        print '>>>>> rest a bit ...'
+        print '==================== >>> rest a bit ...'
         if pagecount >= pagemax:
-            print '============= >>>> Pagemax reached. Done.'
+            print '==================== >>> Pagemax reached. Done.'
             break
-        y = random.uniform(15,20)
+        y = random.uniform(30,45)
         time.sleep(y)
     return 0
               
@@ -384,17 +396,16 @@ pagemax = 30
 city = 'sfbay'
 state = 'CA'
 
-make = 'chevrolet'
-model = 'impala'
+make = 'nissan'
+model = 'altima'
 
 #citystatepagelist = [('sfbay', 'CA', 0), ('losangeles', 'CA', 0),('newyork', 'NY', 0), ('seattle', 'WA', 0),('orangecounty', 'CA', 0), ('sandiego','CA', 0), ('chicago', 'IL', 0), ('sacramento','CA', 0), ('portland', 'OR', 0), ('phoenix', 'AZ', 0), ('washingtondc', 'DC', 0), ('atlanta', 'GA', 0), ('miami', 'FL', 0), ('boston', 'MA', 0),('dallas', 'TX', 0) ,('inlandempire', 'CA', 0), ('denver', 'CO', 0), ('minneapolis', 'MN', 0), ('austin', 'TX', 0), ('houston', 'TX', 0), ('tampa', 'FL', 0), ('orlando', 'FL', 0), ('newjersey', 'NJ', 0), ('philadelphia', 'PA', 0), ('lasvegas', 'NV', 0), ('detroit','MI', 0) , ('stlouis', 'MO', 0) ]
 
 
 
-citystatepagelist = [  ('houston', 'TX', 0), ('tampa', 'FL', 0), ('orlando', 'FL', 0), ('newjersey', 'NJ', 0), ('philadelphia', 'PA', 0), ('lasvegas', 'NV', 0), ('detroit','MI', 0) , ('stlouis', 'MO', 0) ]
+citystatepagelist = [  ('inlandempire', 'CA', 1), ('denver', 'CO', 0), ('minneapolis', 'MN', 0), ('austin', 'TX', 0), ('houston', 'TX', 0), ('tampa', 'FL', 0), ('orlando', 'FL', 0), ('newjersey', 'NJ', 0), ('philadelphia', 'PA', 0), ('lasvegas', 'NV', 0), ('detroit','MI', 0) , ('stlouis', 'MO', 0) ]
 
-#  ('sfbay', 'CA', 0), ('losangeles', 'CA', 0),('newyork', 'NY', 0), ('seattle', 'WA', 0),('orangecounty', 'CA', 0), ('sandiego','CA', 0), ('chicago', 'IL', 0), ('sacramento','CA', 0), ('portland', 'OR', 0), ('phoenix', 'AZ', 0), ('washingtondc', 'DC', 0), ('atlanta', 'GA', 0), ('miami', 'FL', 0), ('boston', 'MA', 0),('dallas', 'TX', 1) ,('inlandempire', 'CA', 0), ('denver', 'CO', 0), ('minneapolis', 'MN', 0), ('austin', 'TX', 0),
-
+#  ('sfbay', 'CA', 0), ('losangeles', 'CA', 4),('newyork', 'NY', 5), ('seattle', 'WA', 0),('orangecounty', 'CA', 1), ('sandiego','CA', 1), ('chicago', 'IL', 0), ('sacramento','CA', 1),('portland', 'OR', 0), ('phoenix', 'AZ', 0), ('washingtondc', 'DC', 0),('atlanta', 'GA', 2),('miami', 'FL', 12), ('boston', 'MA', 0),('dallas', 'TX', 0) ,
 
 
 for city, state, startpage in citystatepagelist :
@@ -418,9 +429,9 @@ for city, state, startpage in citystatepagelist :
     #print response.url
     #response.text[:1000] + "..."
 
-    print '-------------------------------------------------'
-    print '  Getting data for ', make, model, 'at', city
-    print '-------------------------------------------------'
+    print '-----------------------------------------------------'
+    print '  Getting data for ', make.title() , model.title(), 'at', city.title()
+    print '-----------------------------------------------------'
 
 
     urls = get_search_page_urls(response)

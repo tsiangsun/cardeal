@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Car data report - GetCarDeals!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link
+    href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css"
+    rel="stylesheet" type="text/css">
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
+  <style>
+                table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-indent: 0.2em;
+            margin-left: 1em;
+        }
+        th, td {
+            padding: 5px;
+        }
+        th {
+            text-align: left;
+        }
+        h1 {
+            text-indent: 15px;
+        }
+        h2 {
+            text-indent: 15px;
+        }
+        h3 {
+            text-indent: 15px;
+        }
+        h4 {
+            text-indent: 15px;
+        }
+        p {
+            text-indent: 15px;
+        }
+        div {
+            text-indent: 15px;
+        }
+        select {
+            margin-left: 15px;
+        }
+        input {
+            margin-left:15px;
+        }
+        p.indent{ padding-left: 15px }
+        div.indent{ padding-left: 15px }
+    </style>
+  
+  </head>
+  <body>
+    <div>
+        <h4><a href='index'>Return to homepage</a></h4>
+    </div>
+    <div id="wrapper">
+        <div>
+            <h2>1. Price distribution: different cities </h2>
+        <img src="data:image/png;base64,{{img_data}}" style="width:1000px;"/>
+        </div>
+        <br>
+        <div>
+            <h2>2. Post traffic </h2>
+                {{ div | safe }}
+                {{ script | safe }}
+        </div>
+        <br> <br>
+        <div>
+            <h2>3. Price distribution: year and miles </h2>
+                {{ div1 | safe }}
+                {{ script1 | safe }}
+        </div>
+        <br> <br>
+        <div>
+            <h2>4. Machine learning to predict price and filter out deals. </h2>
+            <p>e.g. Toyota Camry, we show simple linear regression (left) 
+            and more advanced mixed methods including Random Forest and K-Neighbors (right). 
+            <br>
+            Features considered include <b>postdate, make, model, year, mileage, city, state, attributes 
+            (title status: clean, color, condition: excellent/good,
+            <br> transmission: auto/manual, fuel: gas/dissel, cylinders: v4/v6, drive: fwd/rwd/awd, ...).</b>
+            Blue dots are posted price, red dots are predicted price. <br>
+            The mixed method predicts the price much better.
+            </p>
+        <img src="{{url_for('static', filename='ml-linear-camry.png')}}" style="width:450px;height:400px;" />
+  		<img src="{{url_for('static', filename='ml-nonlinear-camry.png')}}" style="width:450px;height:400px;" />
+        
+        </div>
+        <div>
+            <h2>Ready to see some deals? </h2>
+        </div>
+        <form id='input' method='post' action='result'>	
+	  			<h4 style="color:black">Please select priority: </h4>
+	  			<select name="priority">
+                        <option value="POSTTIME"> Post time priority (default)</option>
+                        <option value="YEAR"> Year priority</option>
+                        <option value="MILES"> Mileage priority</option>
+                        <option value="PRICE"> Budget priority</option>
+                </select>
+				<br><br>		    			
+	    			<input type="submit" value="See deals!">
+	  			</p> <br><br>
+		</form>
+    </div>
+  </body>
+</html>
+
+
+<!-- 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link
+    href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css"
+    rel="stylesheet" type="text/css">
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
+    {{ script | safe }}
+  </head>
+  <body>
+    <div>
+        <h2><a href='index'>Return to index</a></h2>
+    </div>
+    {{ div | safe }}
+  </body>
+</html>
+-->
